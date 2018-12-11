@@ -9,7 +9,7 @@ url         = "https://api.ciscospark.com/v1/messages"
 
 my_fields={'roomId': roomId, 
            'text': 'Hello World',
-           'files': ('screenshot', open(filepath, 'rb'), filetype)
+           'files': (filepath, open(filepath, 'rb'), filetype)
            }
 m = MultipartEncoder(fields=my_fields)
 r = requests.post(url, data=m,
